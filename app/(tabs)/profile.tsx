@@ -1,9 +1,24 @@
-import { Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Profile() {
   return (
-    <View style={{ flex: 1, backgroundColor: "#0E0E10", padding: 20 }}>
-      <Text style={{ color: "white", fontSize: 20 }}>Profile</Text>
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        <View>
+          <Text style={{ color: "white" }}>Profile</Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: "#0E0E10",
+  },
+  scrollContent: {
+    padding: 16,
+  },
+});
