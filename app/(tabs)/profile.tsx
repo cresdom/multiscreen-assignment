@@ -10,6 +10,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const BG = "#0E0E10";
+const CARD = "#1F1F23";
 const WHITE = "#FFFFFF";
 const MUTED = "#9A9AA0";
 const PURPLE = "#9147FF";
@@ -29,8 +30,9 @@ export default function Profile() {
           </Pressable>
         </View>
 
-        {/* User section */}
+        {/* Body */}
         <View style={styles.body}>
+          {/* User row */}
           <View style={styles.userRow}>
             <View style={styles.avatarWrap}>
               <Image
@@ -44,6 +46,25 @@ export default function Profile() {
               <Text style={styles.status}>Offline</Text>
             </View>
           </View>
+
+          {/* Buttons row */}
+          <View style={styles.twoButtonsRow}>
+            <Pressable style={styles.squareBtn}>
+              <Ionicons name="radio-outline" size={18} color={WHITE} />
+              <Text style={styles.squareBtnText}>Stream Manager</Text>
+            </Pressable>
+
+            <Pressable style={styles.squareBtn}>
+              <Ionicons name="stats-chart-outline" size={18} color={WHITE} />
+              <Text style={styles.squareBtnText}>Analytics</Text>
+            </Pressable>
+          </View>
+
+          {/* Try Ad-Free */}
+          <Pressable style={styles.adFreeBtn}>
+            <Ionicons name="ticket-outline" size={18} color={WHITE} />
+            <Text style={styles.adFreeText}>Try Ad-Free</Text>
+          </Pressable>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -51,14 +72,8 @@ export default function Profile() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: BG,
-  },
-
-  scrollContent: {
-    paddingBottom: 24,
-  },
+  safeArea: { flex: 1, backgroundColor: BG },
+  scrollContent: { paddingBottom: 24 },
 
   purpleHeader: {
     height: 120,
@@ -125,5 +140,43 @@ const styles = StyleSheet.create({
   status: {
     color: MUTED,
     marginTop: 4,
+  },
+
+  twoButtonsRow: {
+    flexDirection: "row",
+    gap: 12,
+    marginTop: 18,
+  },
+
+  squareBtn: {
+    flex: 1,
+    backgroundColor: CARD,
+    borderRadius: 12,
+    paddingVertical: 14,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
+  },
+
+  squareBtnText: {
+    color: WHITE,
+    fontWeight: "800",
+  },
+
+  adFreeBtn: {
+    marginTop: 14,
+    backgroundColor: CARD,
+    borderRadius: 12,
+    paddingVertical: 16,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
+  },
+
+  adFreeText: {
+    color: WHITE,
+    fontWeight: "900",
   },
 });
