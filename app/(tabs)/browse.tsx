@@ -16,7 +16,7 @@ type Category = {
   title: string;
   viewers: string;
   tag: string;
-  image: string;
+  image: any;
 };
 
 export default function Browse() {
