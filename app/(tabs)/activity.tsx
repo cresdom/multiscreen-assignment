@@ -152,7 +152,7 @@ function NotificationRow({
 
         <Text style={styles.time}>
           {item.time}
-          {item.category ? ` Â· ${item.category}` : ""}
+          {item.category ? ` · ${item.category}` : ""}
         </Text>
       </View>
     </View>
