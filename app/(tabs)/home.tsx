@@ -342,3 +342,5 @@ const styles = StyleSheet.create({
   },
   offlineName: { color: "#FFFFFF", fontSize: 24, fontWeight: "800" },
 });
+
+

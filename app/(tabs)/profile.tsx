@@ -290,3 +290,5 @@ const styles = StyleSheet.create({
 
   placeholderText: { color: MUTED, fontSize: 18, fontWeight: "700" },
 });
+
+
