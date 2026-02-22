@@ -34,6 +34,7 @@ export default function Activity() {
         message:
           "Watch MasontheAlpaca to save your streak! Your 9-stream streak can be saved within the next 24h",
         time: "1 week ago",
+        avatar: require("../../assets/images/mason.png"),
       },
       {
         id: "3",
@@ -41,24 +42,28 @@ export default function Activity() {
           "Your Gift Sub to typicallycrescia has expired. Click here to go to the channel and resubscribe.",
         time: "1 week ago",
         category: "Subscriptions",
+        avatar: require("../../assets/images/twitch.png"),
       },
       {
         id: "4",
         message:
           "You are now eligible to get Invisible Woman Emotes for Marvel Rivals. To get your loot, claim your Drop by February 20, 2026 8:59:00 am UTC on the Inventory page!",
         time: "1 week ago",
+        avatar: require("../../assets/images/spray.png"),
       },
       {
         id: "5",
         message:
           "You are now eligible to get Invisible Woman Nameplate for Marvel Rivals. To get your loot, claim your Drop by February 20, 2026 8:59:00 am UTC on the Inventory page!",
         time: "1 week ago",
+        avatar: require("../../assets/images/spray.png"),
       },
       {
         id: "6",
         message:
           "You are now eligible to get Invisible Woman Spray for Marvel Rivals. To get your loot, claim your Drop by February 20, 2026 8:59:00 am UTC on the Inventory page!",
         time: "1 week ago",
+        avatar: require("../../assets/images/spray.png"),
       },
     ],
     []
