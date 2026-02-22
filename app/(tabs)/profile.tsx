@@ -103,7 +103,7 @@ export default function Profile() {
               <EmptyState />
             ) : (
               <Text style={styles.placeholderText}>
-                {activeTab} (mock content)
+                {activeTab} 
               </Text>
             )}
           </View>
