@@ -61,4 +61,93 @@ export default function Activity() {
     ],
     []
   );
+
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      {/* title*/}
+      <View style={styles.titleRow}>
+        <Text style={styles.title}>Activity</Text>
+      </View>
+
+      {/* tabs */}
+      <View style={styles.tabsRow}>
+        <TopTabButton
+          label="Notifications"
+          active={activeTab === "Notifications"}
+          onPress={() => setActiveTab("Notifications")}
+        />
+        <TopTabButton
+          label="Whispers"
+          active={activeTab === "Whispers"}
+          onPress={() => setActiveTab("Whispers")}
+        />
+      </View>
+
+      {/* header row section */}
+      <View style={styles.sectionRow}>
+        <Text style={styles.sectionLabel}>EARLIER</Text>
+
+        <Pressable>
+          <Text style={styles.markAll}>MARK ALL AS READ</Text>
+        </Pressable>
+      </View>
+
+      {/* list */}
+      <FlatList
+        data={notifications}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={styles.listContent}
+        renderItem={({ item, index }) => (
+          <NotificationRow item={item} showAccent={index === 0} />
+        )}
+      />
+    </SafeAreaView>
+  );
+}
+
+function TopTabButton({
+  label,
+  active,
+  onPress,
+}: {
+  label: string;
+  active: boolean;
+  onPress: () => void;
+}) {
+  return (
+    <Pressable onPress={onPress} style={styles.tabBtn}>
+      <Text style={[styles.tabText, active && styles.tabTextActive]}>
+        {label}
+      </Text>
+      <View style={[styles.underline, active ? styles.underlineOn : styles.underlineOff]} />
+    </Pressable>
+  );
+}
+
+function NotificationRow({
+  item,
+  showAccent,
+}: {
+  item: NotificationItem;
+  showAccent: boolean;
+}) {
+  return (
+    <View style={styles.rowWrap}>
+      {/* left purple accent like the ss */}
+      {showAccent ? <View style={styles.leftAccent} /> : <View style={styles.leftAccentSpacer} />}
+
+      {/* avatar placeholder */}
+      <View style={styles.avatar} />
+
+      {/* right text */}
+      <View style={styles.textWrap}>
+        <Text style={styles.message}>{item.message}</Text>
+
+        <Text style={styles.time}>
+          {item.time}
+          {item.category ? ` Â· ${item.category}` : ""}
+        </Text>
+      </View>
+    </View>
+  );
 }
