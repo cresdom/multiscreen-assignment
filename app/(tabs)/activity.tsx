@@ -227,8 +227,8 @@ const styles = StyleSheet.create({
   textWrap: { flex: 1, paddingRight: 18 },
   message: {
     color: WHITE,
-    fontSize: 20,
-    fontWeight: "700",
+    fontSize: 14,
+    fontWeight: "800",
     lineHeight: 26,
   },
   time: {
