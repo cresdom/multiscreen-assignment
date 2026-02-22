@@ -68,7 +68,7 @@ export default function Profile() {
             </Pressable>
           </View>
 
-          {/* Try Ad-Free full button */}
+          {/* Try Ad-Free button */}
           <Pressable style={styles.adFreeBtn}>
             <Ionicons name="ticket-outline" size={18} color={WHITE} />
             <Text style={styles.adFreeText}>Try Ad-Free</Text>
