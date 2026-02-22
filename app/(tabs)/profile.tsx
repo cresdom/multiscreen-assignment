@@ -40,12 +40,7 @@ export default function Profile() {
           {/* Avatar + name */}
           <View style={styles.userRow}>
             <View style={styles.avatarWrap}>
-              <Image
-                source={{
-                  uri: "https://placehold.co/200x200/png",
-                }}
-                style={styles.avatar}
-              />
+              <Image source={require("../../assets/images/pompom.png")} style={styles.avatar}/>
             </View>
 
             <View style={{ flex: 1 }}>
