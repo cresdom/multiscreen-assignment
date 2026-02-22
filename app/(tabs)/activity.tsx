@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { FlatList, Pressable, StyleSheet, Text, View, } from "react-native";
+import { FlatList, Pressable, StyleSheet, Text, View, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const BG = "#0E0E10";
@@ -13,7 +13,8 @@ type NotificationItem = {
   id: string;
   message: string;
   time: string;
-  category?: string; // optional like subs
+  category?: string;
+  avatar?: any;
 };
 
 export default function Activity() {
@@ -26,6 +27,7 @@ export default function Activity() {
         message:
           "You are now eligible to get Denny*12000 for Zenless Zone Zero. To get your loot, claim your Drop by March 6, 2026 3:59:00 pm UTC on the Inventory page!",
         time: "4 days ago",
+        avatar: require("../../assets/images/denny.png"),
       },
       {
         id: "2",
@@ -137,7 +139,7 @@ function NotificationRow({
       {showAccent ? <View style={styles.leftAccent} /> : <View style={styles.leftAccentSpacer} />}
 
       {/* avatar placeholder */}
-      <View style={styles.avatar} />
+      <Image source={item.avatar} style={styles.avatar} />
 
       {/* right text */}
       <View style={styles.textWrap}>
