@@ -141,7 +141,7 @@ function NotificationRow({
   return (
     <View style={styles.rowWrap}>
       {/* left purple accent like the ss */}
-      {showAccent ? <View style={styles.leftAccent} /> : <View style={styles.leftAccentSpacer} />}
+      <View style={styles.leftAccent} />
 
       {/* avatars */}
       <Image source={item.avatar} style={styles.avatar} />
