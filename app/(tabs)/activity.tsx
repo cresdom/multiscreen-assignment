@@ -151,3 +151,83 @@ function NotificationRow({
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: BG },
+
+  titleRow: {
+    paddingTop: 8,
+    paddingBottom: 8,
+    alignItems: "center",
+  },
+  title: { color: WHITE, fontSize: 24, fontWeight: "900" },
+
+  tabsRow: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    gap: 40,
+    paddingHorizontal: 18,
+    paddingTop: 10,
+    paddingBottom: 6,
+  },
+
+  tabBtn: { alignItems: "flex-start" },
+  tabText: { color: WHITE, fontSize: 20, fontWeight: "900" },
+  tabTextActive: { color: PURPLE },
+
+  underline: { marginTop: 10, height: 3, borderRadius: 3 },
+  underlineOn: { width: 120, backgroundColor: PURPLE },
+  underlineOff: { width: 120, backgroundColor: "transparent" },
+
+  sectionRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 18,
+    marginTop: 10,
+  },
+  sectionLabel: { color: MUTED, fontWeight: "900", letterSpacing: 1 },
+  markAll: { color: PURPLE, fontWeight: "900", fontSize: 16 },
+
+  listContent: { paddingTop: 14, paddingBottom: 24 },
+
+  rowWrap: {
+    flexDirection: "row",
+    paddingHorizontal: 0,
+    paddingVertical: 14,
+    alignItems: "flex-start",
+  },
+
+  leftAccent: {
+    width: 6,
+    height: 54,
+    backgroundColor: PURPLE,
+    borderTopRightRadius: 6,
+    borderBottomRightRadius: 6,
+    marginTop: 8,
+  },
+  leftAccentSpacer: { width: 6, height: 54, marginTop: 8 },
+
+  avatar: {
+    width: 56,
+    height: 56,
+    borderRadius: 56,
+    backgroundColor: "#2A2A2E",
+    marginLeft: 14,
+    marginRight: 14,
+  },
+
+  textWrap: { flex: 1, paddingRight: 18 },
+  message: {
+    color: WHITE,
+    fontSize: 20,
+    fontWeight: "700",
+    lineHeight: 26,
+  },
+  time: {
+    marginTop: 10,
+    color: MUTED,
+    fontSize: 16,
+    fontWeight: "600",
+  },
+});
