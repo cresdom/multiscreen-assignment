@@ -32,7 +32,7 @@ export default function Activity() {
       {
         id: "2",
         message:
-          "Watch MasontheAlpaca to save your streak! Your 9-stream streak can be saved within the next 24h",
+          "Watch MasontheAlpaca to save your streak! Your 9-stream streak can be saved within the next 24h!",
         time: "1 week ago",
         avatar: require("../../assets/images/mason.png"),
       },
@@ -143,7 +143,7 @@ function NotificationRow({
       {/* left purple accent like the ss */}
       {showAccent ? <View style={styles.leftAccent} /> : <View style={styles.leftAccentSpacer} />}
 
-      {/* avatar placeholder */}
+      {/* avatars */}
       <Image source={item.avatar} style={styles.avatar} />
 
       {/* right text */}
