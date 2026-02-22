@@ -39,7 +39,6 @@ export default function Profile() {
         <View style={styles.body}>
           {/* Avatar + name */}
           <View style={styles.userRow}>
-            {/* Replace this Image with your own avatar if you want */}
             <View style={styles.avatarWrap}>
               <Image
                 source={{
@@ -188,7 +187,7 @@ const styles = StyleSheet.create({
 
   body: {
     paddingHorizontal: 16,
-    marginTop: -34, // pulls avatar area up slightly (like screenshot)
+    marginTop: -34,
   },
 
   userRow: {
