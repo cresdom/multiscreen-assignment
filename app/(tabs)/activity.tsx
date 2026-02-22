@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     paddingBottom: 8,
     alignItems: "center",
   },
-  title: { color: WHITE, fontSize: 24, fontWeight: "900" },
+  title: { color: WHITE, fontSize: 24, fontWeight: "800" },
 
   tabsRow: {
     flexDirection: "row",
@@ -190,11 +190,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 18,
+    paddingHorizontal: 20,
     marginTop: 10,
   },
-  sectionLabel: { color: MUTED, fontWeight: "900", letterSpacing: 1 },
-  markAll: { color: PURPLE, fontWeight: "900", fontSize: 16 },
+  sectionLabel: { color: MUTED, fontWeight: "700", letterSpacing: 1 },
+  markAll: { color: PURPLE, fontWeight: "700", fontSize: 15 },
 
   listContent: { paddingTop: 14, paddingBottom: 24 },
 
@@ -216,6 +216,7 @@ const styles = StyleSheet.create({
   leftAccentSpacer: { width: 6, height: 54, marginTop: 8 },
 
   avatar: {
+    marginTop: 7,
     width: 56,
     height: 56,
     borderRadius: 56,
@@ -228,13 +229,13 @@ const styles = StyleSheet.create({
   message: {
     color: WHITE,
     fontSize: 14,
-    fontWeight: "800",
+    fontWeight: "700",
     lineHeight: 26,
   },
   time: {
     marginTop: 10,
     color: MUTED,
-    fontSize: 16,
-    fontWeight: "600",
+    fontSize: 14,
+    fontWeight: "500",
   },
 });
